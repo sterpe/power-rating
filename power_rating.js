@@ -11,6 +11,8 @@
  */
 
 const SEASON_DATA = require('./data/season_data.js');
+const SEASON_DATA_2026 = require('./data/season_data_2026.js');
+console.log(SEASON_DATA_2026);
 
 const MAX_SCORE_CAP = 65; // points-for is capped at this value when rating offense
 const RATING_CENTER = 0.5; // AtkRt/DefRt are centered on this value
@@ -153,4 +155,8 @@ function computePowerRating(teams) {
   };
 }
 
-module.exports = { computePowerRating, data: SEASON_DATA };
+module.exports = {
+  computePowerRating,
+  data: SEASON_DATA,
+  data_2026: SEASON_DATA_2026,
+};

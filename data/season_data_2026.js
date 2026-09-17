@@ -16,12 +16,13 @@ const {
 
 // Each team is its institution name plus a list of games. Each game
 // is a self-contained record of opponent/pointsFor/pointsAllowed.
-// This data reflects Week 1 of the 2026 DI Fall season
+// This data reflects Weeks 1-2 of the 2026 DI Fall season
 const RAW_DATA = [
   {
     institution: BROWN,
     games: [
       { opponent: NAVY, pointsFor: 33, pointsAllowed: 17 },
+      { opponent: HARVARD, pointsFor: 0, pointsAllowed: 76 },
     ],
   },
   {
@@ -47,10 +48,11 @@ const RAW_DATA = [
     institution: HARVARD,
     games: [
       { opponent: SHU, pointsFor: 26, pointsAllowed: 24 },
+      { opponent: BROWN, pointsFor: 76, pointsAllowed: 0 },
     ],
   },
   {
-    instituion: SHU,
+    institution: SHU,
     games: [
       { opponent: HARVARD, pointsFor: 24, pointsAllowed: 26 },
     ],
@@ -59,6 +61,7 @@ const RAW_DATA = [
     institution: PRINCETON,
     games: [
       { opponent: LASALLE, pointsFor: 52, pointsAllowed: 17  },
+      { opponent: LIU, pointsFor: 91, pointsAllowed: 0 },
     ],
   },
   {
@@ -70,13 +73,26 @@ const RAW_DATA = [
   {
     institution: LIU,
     games: [
-      { opponent: MSM, pointsFor: 29, pointsAllowed: 28 }
+      { opponent: MSM, pointsFor: 29, pointsAllowed: 28 },
+      { opponent: PRINCETON, pointsFor: 0, pointsAllowed: 91 },
     ],
   },
   {
     institution: MSM,
     games: [
       { opponent: LIU, pointsFor: 28, pointsAllowed: 29 },
+    ],
+  },
+  {
+    institution: LINDENWOOD,
+    games: [
+      { opponent: QUEENS, pointsFor: 103, pointsAllowed: 5 },
+    ],
+  },
+  {
+    institution: QUEENS,
+    games: [
+      { opponent: LINDENWOOD, pointsFor: 5, pointsAllowed: 103 },
     ],
   },
 ];

@@ -6,15 +6,20 @@ Compute the NCAA &lt;> NIRA Division I Women's XVs PwrRt.
 ```js
 const { computePowerRating, data } = require('power-rating');
  
-const result = computePowerRating(data);
+const result = computePowerRating(data[2026]);
 console.log(result.data); // per-team stats + ratings, sorted as input
 ```
  
+`data` is keyed by season year (e.g. `2025`, `2026`); pass the year's
+array of teams to `computePowerRating`.
+ 
 ## Data shape
+ 
+`data[year]` is an array of teams:
  
 ```js
 {
-  institute: DARTMOUTH,
+  institution: DARTMOUTH,
   games: [
     { opponent: QUINNIPIAC, pointsFor: 59, pointsAllowed: 0 },
     { opponent: NAVY, pointsFor: 52, pointsAllowed: 7 },

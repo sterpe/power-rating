@@ -1,9 +1,10 @@
+const SEASON_DATA = require('./data/season_data.js');
+
 const {
-  computePowerRating,
-  data,
+  computePowerRating
 } = require('./power_rating');
 
 module.exports = {
   computePowerRating,
-  data,
+  data: SEASON_DATA,
 };

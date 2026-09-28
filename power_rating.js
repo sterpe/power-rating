@@ -10,8 +10,6 @@
  * (PwrRt) averages TmRt and wW%.
  */
 
-const SEASON_DATA = require('./data/season_data.js');
-
 const MAX_SCORE_CAP = 65; // points-for is capped at this value when rating offense
 const RATING_CENTER = 0.5; // AtkRt/DefRt are centered on this value
 const RATING_SPREAD = 0.1; // one standard deviation maps to this much rating
@@ -155,5 +153,4 @@ function computePowerRating(teams) {
 
 module.exports = {
   computePowerRating,
-  data: SEASON_DATA,
 };
